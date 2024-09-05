@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Nuevo auto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Editar auto</h3>
+
+    <form method="post" action="/editarAuto">
+        <input type="hidden" name="id" th:value="${auto.getId()}" >
+        <div class="form-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" class="form-control" id="modelo" name="modelo" th:value="${auto.getModelo()}">
+        </div>
+
+        <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="text" class="form-control" id="color" name="color" th:value="${auto.getColor()}">
+        </div>
+
+        <div class="form-group">
+            <label for="kilometraje">Kilometraje:</label>
+            <input type="text" class="form-control" id="kilometraje" name="kilometraje" th:value="${auto.getKilometraje()}">
+        </div>
+
+        <div class="form-group">
+            <label for="sede">Id_sede:</label>
+            <input type="text" class="form-control" id="sede" name="sede" th:value="${auto.getId_sede()}">
+        </div>
+
+        <div class="form-group">
+            <label for="costo">Costo por dia:</label>
+            <input type="text" class="form-control" id="costo" name="costo" th:value="${auto.getCosto_dia()}">
+        </div>
+
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+    </form>
+
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
