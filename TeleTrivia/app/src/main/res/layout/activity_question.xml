@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    tools:context=".QuestionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/rounded_bottom"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Título de la trivia -->
+        <TextView
+            android:id="@+id/titulo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Listo? Juega!"
+            android:textSize="35sp"
+            android:textColor="#000000"
+
+            app:layout_constraintBottom_toTopOf="@+id/tv_tiempo"/>
+
+        <TextView
+            android:id="@+id/titulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Knowledge"
+            android:textSize="20sp"
+            android:textColor="#000000"
+
+            app:layout_constraintBottom_toTopOf="@+id/tv_tiempo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="55dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:layout_marginTop="130dp">
+        <!-- Contador de tiempo -->
+        <TextView
+            android:id="@+id/tv_tiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiempo restante: 00:00"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pregunta"/>
+
+    </LinearLayout>
+    <!-- Contenedor de vista de trivia -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="15dp"
+
+        android:background="@drawable/rounded_total"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <!-- Pregunta -->
+        <TextView
+            android:id="@+id/tv_pregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Pregunta 1/3"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvtextpregunta" />
+
+        <TextView
+            android:id="@+id/tvtextpregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Knowledge"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"/>
+
+        <!-- Opciones de respuesta -->
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/optiontrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="True"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/optionfalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="False"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <!-- Botón siguiente -->
+        <Button
+            android:id="@+id/btnsiguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:text="Siguiente" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
