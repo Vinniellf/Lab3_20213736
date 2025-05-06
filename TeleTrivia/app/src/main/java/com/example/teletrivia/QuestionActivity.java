@@ -128,10 +128,11 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     private void siguientePregunta() {
-        resetearCampos();
-        Question currentQuestion = questions.get(preguntaActual);
-        tvPregunta.setText(currentQuestion.getQuestion());
+
         if (preguntaActual < totalPreguntas) {
+            resetearCampos();
+            Question currentQuestion = questions.get(preguntaActual);
+            tvPregunta.setText(currentQuestion.getQuestion());
             preguntaActual++;
             // Actualizamos la pregunta y el contador
             tvPregunta.setText("Pregunta " + preguntaActual + "/" + totalPreguntas);
